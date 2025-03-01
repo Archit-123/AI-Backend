@@ -20,7 +20,9 @@ const BotResponse = async (prompt) => {
 };
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({ origin: "https://aichatarchit.netlify.app", credentials: true })
+);
 
 app.get("/", (req, res) => {
   res.json("Hello world");
